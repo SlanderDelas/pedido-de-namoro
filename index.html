@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #noButton {
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+        }
+
+        #yesButton {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quer namorar comigo?</h1>
+        <div class="buttons">
+            <button id="yesButton">Sim</button>
+            <button id="noButton">Não</button>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("noButton");
+        const yesButton = document.getElementById("yesButton");
+
+        noButton.addEventListener("mouseover", () => {
+            const x = Math.floor(Math.random() * 200) - 100;
+            const y = Math.floor(Math.random() * 200) - 100;
+            noButton.style.transform = `translate(${x}px, ${y}px)`;
+        });
+
+        yesButton.addEventListener("click", () => {
+            alert("Eita gostosa sabia que vc ia aceitar! amo seus peitos quero aperta");
+        });
+    </script>
+</body>
+</html>
